@@ -1,7 +1,12 @@
 import {Container} from './styled';
 
-import Produto from '../Product';
+import Produto from '../Product/index';
 import {useState} from 'react';
+
+import { CarouselConfig } from './config';
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 export default function Home() {
 const [produtos, setProdutos] = useState([]);
@@ -54,9 +59,22 @@ const [produtos, setProdutos] = useState([]);
       <br />
 
       <div className="lista-produtos">
-        {produtos.map((item) => (
-          <Produto info={item} />
-        ))}
+
+        <Carousel 
+            responsive={CarouselConfig}
+            infinite={true}
+            showDots={true}
+            containerClass="carousel-container"
+          >
+
+          {produtos.map(item => 
+            <Produto 
+            key={item.id}
+            info={item} />
+          )}
+
+        
+        </Carousel>
       </div>
     </Container>
   );

@@ -7,6 +7,29 @@ export default function DetalheProduto(props) {
 const [produto, setProduto] = useState(props.location.state);  
 const navigation = useHistory();
 
+
+function comprar(){
+  // Lê o Array de Produtos do Carrinho do Cookie.
+    // Se o Cookie estiver vazio, volta um Array vazio []
+    // Se o Cookie não estiver vazio, converte o Cookie em Array pelo JSON.parse()
+  let carrinho = Cookie.get('carrinho');
+  carrinho = carrinho !== undefined
+                ? JSON.parse(carrinho)
+                : [];
+
+  // Verifica se o produto em questão já está no carrinho pelo Id e pela função some()
+  // Se o produto não existir, adiciona o produto no carrinho copiando todos os campos do produto
+  // e adicionando o campo novo qtd com valor 1
+  if (carrinho.some(item => item.id === produto.id) === false)
+      carrinho.push({...produto, qtd: 1});
+
+  // Atualiza o Cookie com o novo produto Comprado
+  Cookie.set('carrinho', JSON.stringify(carrinho));
+
+  // Abre a página /carrinho
+  navigation.push('/carrinho');
+}
+
     return (
         <Container>
     
@@ -27,7 +50,7 @@ const navigation = useHistory();
               <h2> Especificações </h2>
               <div> {produto.especificacoes} </div>
     
-              <div> <button /*onClick={comprar}*/> Comprar </button> </div>
+              <div> <button onClick={comprar}> Comprar </button> </div>
             </div>
     
         </Container>

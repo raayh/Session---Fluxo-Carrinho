@@ -4,9 +4,9 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 
 import './styles.css'
-import App from './InfoX/home'
-import DetalheProduto from './InfoX/detalheProduto'
-import Carrinho from './InfoX/carrinho'
+import App from './infox/home'
+import DetalheProduto from './infox/ProductDetail'
+import Carrinho from './infox/Cart'
 
 
 const rootElement = document.getElementById("root");
