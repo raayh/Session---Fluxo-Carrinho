@@ -1,0 +1,22 @@
+# PARA PUBLICAR SEU SITE
+
+## PUBLICAR O REACT
+
+	-> SE CADASTRAR NO NETLIFY > NOVO SITE DO GIT > GITHUB 
+
+	* BASE DIRECTORY = pasta onde está o react. EX: REACT/SITE
+	* BUILD COMMAND = NPM RUN BUILD
+	* PUBLISH DIRECTORY = a pasta que ele cria quando vc dá o comando a cima. 
+
+	-> CLICAR EM DEPLOY, E AGUARDAR.
+
+## PUBLICAR API
+
+	-> SITE HEROKU > SE CADASTRAR 
+	-> CRIAR UM PROJETO P/ API NO GIT 
+	-> NO VS:
+
+		* adicionar o projeto criar;
+		* rodar o comando no terminal : 
+		git subtree push --prefix api(nome da pasta) heroku(nome que vc deu para o projeto adicionado) master
+	-> novo > create new app > dar nome > create > conectar com git > pesquisar pelo nome do projeto > disable > deploy 
