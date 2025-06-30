@@ -16,3 +16,27 @@ Este projeto é uma versão prática isolada do fluxo de carrinho de compras par
 ## 🎯 Objetivo do Projeto
 Exercitar, de forma prática, o desenvolvimento do fluxo de carrinho de um e-commerce. Foco na manipulação do estado global/local e estruturação da interface para o usuário final.
 
+## 🧪 Como Executar o Projeto
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/raayh/NOME-DO-REPO-CARRINHO.git
+   ```
+2. Acesse a pasta do projeto:
+
+   ```bash
+   cd nome-da-pasta
+   ```
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+4. Inicie o servidor local:
+
+   ```bash
+   npm start
+   ```
+5. Acesse no navegador:
+   [http://localhost:3000](http://localhost:3000)
